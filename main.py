@@ -1,4 +1,4 @@
-# QuizGame v.1.0 by GrobranGG (https://github.com/GrobranGG/)
+# QuizGame v.1.1 by GrobranGG (https://github.com/GrobranGG/)
 import random
 import colorama
 import os
@@ -26,7 +26,7 @@ def convert():
     print("| |  | | | | | |_  / | |_ |/ _` | '_ ` _ \ / _ \ ")
     print("| |__| | |_| | |/ /| |__| | (_| | | | | | |  __/ ")
     print(" \___\_\\__,_|_/___| \_____|\__,_|_| |_| |_|\___|")
-    print(Fore.BLUE + "                              v.1.0 by GrobranGG")
+    print(Fore.BLUE + "                              v.1.1 by GrobranGG")
 
     print(Fore.WHITE + "Choose a language (number):")
     print("1. English")
@@ -38,7 +38,7 @@ def convert():
     # Dictionaries
     english = {'youranswer': 'Your answer (number):', 'welcome_message': 'Hi! Welcome to the quiz! Now I`m going to ask you questions about logic. Your task is to answer everything correctly, let`s go!',
             'topic': 'Choose a quiz topic:', 'videogame': ' Video games', 'end_1': 'You answered', 'end_2': 'of 5 questions correctly!', 'repeat_question': 'Choose the next action:', 'repeat_variant1': '1. Restart the program',
-            'repeat_variant2': '2. Close the program', 'answer_repeat': 'Choose the answer (number): '}
+            'repeat_variant2': '2. Close the program', 'answer_repeat': 'Choose the answer (number): ', 'percent_1': 'This is', 'percent_2': 'of the correct answers!'}
 
     english_quest = {'videogame_1': 'Question 1: The name of the main character literally translates into Russian as "maximum pain", which game is it about?',
                     'videogame_2': 'Question 2: In which game does the main character find himself locked up in his own apartment and travels to other worlds through a hole in the bathroom?',
@@ -48,7 +48,7 @@ def convert():
 
     russian = {'youranswer': 'Ваш ответ (число):', 'welcome_message': 'Привет! Добро пожаловать в викторину! Сейчас я буду задавать тебе вопросы на логику. Твоя задача - ответить на все правильно, поехали!',
             'topic': 'Выбери тематику викторины:', 'videogame': ' Видеоигры', 'end_1': 'Ты ответил правильно на', 'end_2': 'из 5 вопросов!', 'repeat_question': 'Выберите следующее действие:', 'repeat_variant1': '1. Переапустить программу',
-            'repeat_variant2': '2. Закрыть программу', 'answer_repeat': 'Выбери ответ (число): '}
+            'repeat_variant2': '2. Закрыть программу', 'answer_repeat': 'Выбери ответ (число): ', 'percent_1': 'Это', 'percent_2': 'правильных ответов!'}
 
     russian_quest = {'videogame_1': 'Вопрос 1: Имя главного героя дословно переводится на русский язык как «максимальная боль», о какой игре идёт речь?',
                     'videogame_2': 'Вопрос 2: В какой игре главный герой оказывается взаперти собственной квартиры и путешествует в иные миры через отверстие в ванной комнате?',
@@ -158,6 +158,7 @@ def convert():
 
         print(Fore.CYAN)
         print(lang['end_1'], score, lang['end_2'])
+        print(Fore.RESET + lang['percent_1'], score * 20, "%", lang['percent_2'])
 
     else:
         print(Fore.RED + "Incorrect topic!")
@@ -168,11 +169,13 @@ def convert():
     print(Fore.CYAN + lang['repeat_question'])
     print(Fore.GREEN + lang['repeat_variant1'])
     print(Fore.GREEN + lang['repeat_variant2'])
-    repeat = int(input(Fore.WHITE + lang['answer_repeat']))
+    repeat = input(Fore.WHITE + lang['answer_repeat'])
 
-    if repeat == 1:
+    if repeat == "1":
         convert()
-    if repeat == 2:
+    elif repeat == "2":
+        sys.exit()
+    else:
         sys.exit()
 
 convert()
