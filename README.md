@@ -1,3 +1,6 @@
+# QuizGame
+![banner](https://c.radikal.ru/c20/2111/17/623e4d33efa9.png)
+
 # About Project
 __QuizGame__ is a quiz with different topics. You can choose a topic and take the quiz. In the end you will get your result. The program is under active development, so there may be errors or flaws in it.
 
