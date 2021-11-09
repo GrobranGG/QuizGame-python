@@ -14,7 +14,7 @@ python main.py
 ```
 
 # Project Status
-At the moment, the project has version __1.1__. You can download the latest version on the [repository.](https://github.com/GrobranGG/QuizGame-python)
+At the moment, the project has version __1.2__. You can download the latest version on the [repository.](https://github.com/GrobranGG/QuizGame-python)
 
 # License
 This repository uses the [MIT License.](https://github.com/GrobranGG/QuizGame-python/blob/main/LICENSE)
