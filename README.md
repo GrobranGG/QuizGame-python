@@ -12,6 +12,7 @@ cd QuizGame-python
 pip install -r requirements.txt
 python main.py
 ```
+There is also ".exe" version of the program. It is located in the [dist folder.](https://github.com/GrobranGG/QuizGame-python/tree/main/dist)
 
 # Project Status
 At the moment, the project has version __1.2__. You can download the latest version on the [repository.](https://github.com/GrobranGG/QuizGame-python)
