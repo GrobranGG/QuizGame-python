@@ -1,5 +1,4 @@
-# QuizGame v.1.1 by GrobranGG (https://github.com/GrobranGG/)
-import random
+# QuizGame v.1.2 by GrobranGG (https://github.com/GrobranGG/)
 import colorama
 import os
 import sys
@@ -26,7 +25,7 @@ def convert():
     print("| |  | | | | | |_  / | |_ |/ _` | '_ ` _ \ / _ \ ")
     print("| |__| | |_| | |/ /| |__| | (_| | | | | | |  __/ ")
     print(" \___\_\\__,_|_/___| \_____|\__,_|_| |_| |_|\___|")
-    print(Fore.BLUE + "                              v.1.1 by GrobranGG")
+    print(Fore.BLUE + "                              v.1.2 by GrobranGG")
 
     print(Fore.WHITE + "Choose a language (number):")
     print("1. English")
@@ -36,9 +35,9 @@ def convert():
     language = input("Enter your language: ")
 
     # Dictionaries
-    english = {'youranswer': 'Your answer (number):', 'welcome_message': 'Hi! Welcome to the quiz! Now I`m going to ask you questions about logic. Your task is to answer everything correctly, let`s go!',
+    english = {'youranswer': 'Your answer (number):', 'welcome_message': 'Welcome to QuizGaame! \nNow you have to choose a topic, after which the program will ask you 5 questions on this topic. \nThe more correct answers - the better!',
             'topic': 'Choose a quiz topic:', 'videogame': ' Video games', 'end_1': 'You answered', 'end_2': 'of 5 questions correctly!', 'repeat_question': 'Choose the next action:', 'repeat_variant1': '1. Restart the program',
-            'repeat_variant2': '2. Close the program', 'answer_repeat': 'Choose the answer (number): ', 'percent_1': 'This is', 'percent_2': 'of the correct answers!'}
+            'repeat_variant2': '2. Close the program', 'answer_repeat': 'Choose the answer (number): ', 'percent_1': 'This is', 'percent_2': 'of the correct answers!', 'bruh_answer': 'Incorrect answer!'}
 
     english_quest = {'videogame_1': 'Question 1: The name of the main character literally translates into Russian as "maximum pain", which game is it about?',
                     'videogame_2': 'Question 2: In which game does the main character find himself locked up in his own apartment and travels to other worlds through a hole in the bathroom?',
@@ -46,9 +45,9 @@ def convert():
                     'videogame_4': 'Question 4: How many characters are currently in Dota 2? (2021)', 
                     'videogame_5': 'Question 5: In what year was the first Mario game released?'}
 
-    russian = {'youranswer': 'Ваш ответ (число):', 'welcome_message': 'Привет! Добро пожаловать в викторину! Сейчас я буду задавать тебе вопросы на логику. Твоя задача - ответить на все правильно, поехали!',
+    russian = {'youranswer': 'Ваш ответ (число):', 'welcome_message': 'Добро пожаловать в QuizGaame! \nСейчас ты должен выбрать тему, после чего программа задаст тебе 5 вопросов по этой теме. \nЧем больше правильных ответов - тем лучше!',
             'topic': 'Выбери тематику викторины:', 'videogame': ' Видеоигры', 'end_1': 'Ты ответил правильно на', 'end_2': 'из 5 вопросов!', 'repeat_question': 'Выберите следующее действие:', 'repeat_variant1': '1. Переапустить программу',
-            'repeat_variant2': '2. Закрыть программу', 'answer_repeat': 'Выбери ответ (число): ', 'percent_1': 'Это', 'percent_2': 'правильных ответов!'}
+            'repeat_variant2': '2. Закрыть программу', 'answer_repeat': 'Выбери ответ (число): ', 'percent_1': 'Это', 'percent_2': 'правильных ответов!', 'bruh_answer': 'Некорректный ответ!'}
 
     russian_quest = {'videogame_1': 'Вопрос 1: Имя главного героя дословно переводится на русский язык как «максимальная боль», о какой игре идёт речь?',
                     'videogame_2': 'Вопрос 2: В какой игре главный герой оказывается взаперти собственной квартиры и путешествует в иные миры через отверстие в ванной комнате?',
@@ -92,8 +91,13 @@ def convert():
 
         if answer_1 == "2":
             score = score + 1
+        elif answer_1 == "":
+            print(Fore.RED + lang['bruh_answer'])
+            input()
+            sys.exit()
         else:
             score = score + 0
+        
         os.system(clean_command)
 
         # Question 2
@@ -107,8 +111,13 @@ def convert():
 
         if answer_1 == "1":
             score = score + 1
+        elif answer_1 == "":
+            print(Fore.RED + lang['bruh_answer'])
+            input()
+            sys.exit()
         else:
             score = score + 0
+        
         os.system(clean_command)
 
         # Question 3
@@ -122,8 +131,13 @@ def convert():
 
         if answer_1 == "1":
             score = score + 1
+        elif answer_1 == "":
+            print(Fore.RED + lang['bruh_answer'])
+            input()
+            sys.exit()
         else:
             score = score + 0
+        
         os.system(clean_command)
 
         # Question 4
@@ -137,8 +151,13 @@ def convert():
 
         if answer_1 == "3":
             score = score + 1
+        elif answer_1 == "":
+            print(Fore.RED + lang['bruh_answer'])
+            input()
+            sys.exit()
         else:
             score = score + 0
+        
         os.system(clean_command)
 
         # Question 5
@@ -152,8 +171,13 @@ def convert():
 
         if answer_1 == "2":
             score = score + 1
+        elif answer_1 == "":
+            print(Fore.RED + lang['bruh_answer'])
+            input()
+            sys.exit()
         else:
             score = score + 0
+        
         os.system(clean_command)
 
         print(Fore.CYAN)
