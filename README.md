@@ -1,5 +1,5 @@
 # QuizGame
-![banner](https://i.ibb.co/jbc16KS/68747470733a2f2f692e6962622e636f2f443850665244782f62616e6e6572726561646d652e706e67.png)
+![banner](https://i.ibb.co/sH1WHKS/1.png)
 
 # About Project
 __QuizGame__ is a quiz with different topics. You can choose a topic and take the quiz. In the end you will get your result. The program is under active development, so there may be errors or flaws in it.
