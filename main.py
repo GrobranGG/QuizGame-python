@@ -1,12 +1,11 @@
-# QuizGame v.1.2 by GrobranGG (https://github.com/GrobranGG/)
+# QuizGame v.1.3 by GrobranGG (https://github.com/GrobranGG/)
 import colorama
 import os
 import sys
-
 from colorama import Fore
-colorama.init()
 
 def convert():
+    colorama.init()
     opersystem = sys.platform
 
     clean_command = ""
@@ -25,14 +24,13 @@ def convert():
     print("| |  | | | | | |_  / | |_ |/ _` | '_ ` _ \ / _ \ ")
     print("| |__| | |_| | |/ /| |__| | (_| | | | | | |  __/ ")
     print(" \___\_\\__,_|_/___| \_____|\__,_|_| |_| |_|\___|")
-    print(Fore.BLUE + "                              v.1.2 by GrobranGG")
+    print(Fore.BLUE + "                              v.1.3 by GrobranGG")
 
     print(Fore.WHITE + "Choose a language (number):")
     print("1. English")
     print("2. Russian")
 
-    print(Fore.CYAN)
-    language = input("Enter your language: ")
+    language = input(Fore.CYAN + "Enter your language: ")
 
     # Dictionaries
     english = {'youranswer': 'Your answer (number):', 'welcome_message': 'Welcome to QuizGaame! \nNow you have to choose a topic, after which the program will ask you 5 questions on this topic. \nThe more correct answers - the better!',
@@ -63,7 +61,6 @@ def convert():
         quest_lang = russian_quest
     else:
         print(Fore.RED + "Incorrect language!")
-        input()
         sys.exit()
 
     os.system(clean_command)
@@ -180,8 +177,7 @@ def convert():
         
         os.system(clean_command)
 
-        print(Fore.CYAN)
-        print(lang['end_1'], score, lang['end_2'])
+        print(Fore.CYAN + lang['end_1'], score, lang['end_2'])
         print(Fore.RESET + lang['percent_1'], score * 20, "%", lang['percent_2'])
 
     else:
